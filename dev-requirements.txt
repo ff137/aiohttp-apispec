@@ -1,6 +1,6 @@
 -r requirements.txt
 anyio~=4.3.0
-black~=24.4.0
+black~=24.4.2
 codecov~=2.1.13
 isort~=5.13.2
 marshmallow~=3.21.1
