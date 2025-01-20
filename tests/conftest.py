@@ -248,4 +248,5 @@ async def aiohttp_app(
         app.middlewares.extend([intercept_error, validation_middleware])
 
     client = await aiohttp_client(app)
-    return client
+    yield client
+    await client.close()

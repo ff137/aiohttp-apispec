@@ -169,7 +169,10 @@ async def test_app_swagger_json(aiohttp_app, example_for_request_schema):
             "Request": {**_request_properties, 'example': example_for_request_schema},
             "Partial-Request": _request_properties,
             "Response": {
-                "properties": {"data": {"type": "object"}, "msg": {"type": "string"}},
+                "properties": {
+                    "data": {"additionalProperties": {}, "type": "object"},
+                    "msg": {"type": "string"},
+                },
                 "type": "object",
             },
         },
